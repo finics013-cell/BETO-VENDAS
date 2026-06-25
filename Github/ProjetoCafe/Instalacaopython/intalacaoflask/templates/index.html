@@ -4,8 +4,9 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BETO VENDAS</title>
+    <title>BETO Café Caramello</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -16,14 +17,24 @@
     <nav class="navbar">
 
     <div class="logo">
-        BETO VENDAS
+        BETO Café Caramello
     </div>
 
-    <ul class="menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu" id="menu">
 
         <li><a href="#">Início</a></li>
 
         <li><a href="#beneficios">Benefícios</a></li>
+
+        <li><a href="#historia">O que é?</a></li>
+
+        <li><a href="#faq">FAQ</a></li>
 
         <li><a href="#produtos">Produtos</a></li>
 
@@ -59,7 +70,6 @@
     ☕ Comprar com Beto
 </a>
 
-</a>
 
         </div>
 
@@ -67,9 +77,18 @@
 
             <div class="foto-flutuante">
 
-                <img
-                    src="{{ url_for('static', filename='img/beto.png') }}"
-                    alt="Beto">
+                <a
+                    href="https://linktr.ee/betocafecaramello"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="foto-link"
+                    title="Veja minhas redes e links">
+
+                    <img
+                        src="{{ url_for('static', filename='img/BetoCoffe.png') }}"
+                        alt="Beto - clique para ver o Linktree">
+
+                </a>
 
             </div>
 
@@ -79,26 +98,104 @@
 
 </header>  
 
-<section class="beneficios-topo">
+<section class="beneficios-topo" id="beneficios">
+
 
     <div class="beneficio-topo">
-        <h3>☕ Sabor Incrível</h3>
-        <p>Uma experiência única de caramelo em cada xícara.</p>
+
+        <img src="{{ url_for('static', filename='img/cafeexp.png') }}">
+
+        <h3>Sabor Incrível</h3>
+
+        <p>
+            Uma experiência única de caramelo em cada xícara.
+        </p>
+
     </div>
 
-    <div class="beneficio-topo">
-        <h3>⚡ Energia Limpa</h3>
-        <p>Cafeína natural para manter seu foco e produtividade.</p>
-    </div>
+
 
     <div class="beneficio-topo">
-        <h3>🧠 Foco & Performance</h3>
-        <p>Ideal para estudos, trabalho e criação de conteúdo.</p>
+
+        <img src="{{ url_for('static', filename='img/Linha Funcional 6.jpg') }}">
+
+        <h3>Energia Limpa</h3>
+
+        <p>
+            Cafeína natural para manter seu foco e produtividade.
+        </p>
+
     </div>
 
+
+
     <div class="beneficio-topo">
-        <h3>🌿 Qualidade Premium</h3>
-        <p>Ingredientes selecionados para entregar o melhor resultado.</p>
+
+        <img src="{{ url_for('static', filename='img/Linha Funcional 7.jpg') }}">
+
+        <h3>Foco & Performance</h3>
+
+        <p>
+            Ideal para estudos, trabalho e criação de conteúdo.
+        </p>
+
+    </div>
+
+
+
+    <div class="beneficio-topo">
+
+        <img src="{{ url_for('static', filename='img/qualidade.png') }}">
+
+        <h3>Qualidade Premium</h3>
+
+        <p>
+            Ingredientes selecionados para entregar o melhor resultado.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- HISTÓRIA DO CAFÉ -->
+
+<section class="historia" id="historia">
+
+    <img
+        src="{{ url_for('static', filename='img/Oque e.png') }}"
+        alt="O que é o Café Caramello - nossa história"
+        class="historia-img">
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+    <h2>
+        Perguntas Frequentes
+    </h2>
+
+    <div class="faq-container">
+
+        <img
+            src="{{ url_for('static', filename='img/revenda.png') }}"
+            alt="Posso vender este café?"
+            class="faq-img">
+
+        <img
+            src="{{ url_for('static', filename='img/rende.png') }}"
+            alt="Rende quantas porções?"
+            class="faq-img">
+
+        <img
+            src="{{ url_for('static', filename='img/zerosugar.png') }}"
+            alt="Tem edição zero açúcar?"
+            class="faq-img">
+
     </div>
 
 </section>
@@ -118,10 +215,15 @@
 
     <div class="produtos-container">
 
+        
+
+      <div class="produto-card">
 
 
-        <div class="produto-card">
-
+    <img 
+    src="{{ url_for('static', filename='img/cafe2.png') }}"
+    class="produto-img"
+>
 
             <h3>
                 Café Caramello Original
@@ -133,7 +235,10 @@
             </p>
 
 
-            <a class="btn" href="#">
+            <a class="btn"
+                href="https://cafecaramello.com.br/adalbertobatista01"
+                target="_blank"
+                rel="noopener noreferrer">
                 Quero comprar
             </a>
 
@@ -147,6 +252,12 @@
         <div class="produto-card">
 
 
+    <img 
+    src="{{ url_for('static', filename='img/cafewhey.png') }}"
+    class="produto-img"
+>
+
+
             <h3>
                 Café Caramello Especial
             </h3>
@@ -157,7 +268,10 @@
             </p>
 
 
-            <a class="btn" href="#">
+            <a class="btn"
+                href="https://cafecaramello.com.br/adalbertobatista01"
+                target="_blank"
+                rel="noopener noreferrer">
                 Quero comprar
             </a>
 
@@ -255,18 +369,21 @@ Comprar pelo WhatsApp
 
         <div class="links">
 
+    <a
+    href="https://www.facebook.com/profile.php?id=61585505685990 " target="_blank">
+    
+        Facebook
 
-            <a href="#">
-                WhatsApp
-            </a>
+    </a>
 
+    <a
+    href="https://www.instagram.com/cafecaramello.baixada/"target="_blank">
 
-            <a href="#">
-                Instagram
-            </a>
+        Instagram
 
+    </a>
 
-        </div>
+</div>
 
 
         <p class="copyright">
@@ -280,6 +397,24 @@ Comprar pelo WhatsApp
 
 
 </footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('aberto');
+        menuToggle.classList.toggle('ativo');
+    });
+
+    // Fecha o menu ao clicar em um link (melhora a navegação no celular)
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', () => {
+            menu.classList.remove('aberto');
+            menuToggle.classList.remove('ativo');
+        });
+    });
+</script>
 
 </body>
 
